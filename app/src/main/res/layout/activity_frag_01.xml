@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/sao"
+        android:src="@drawable/sao"
+        android:layout_width="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_height="40dp" />
+
+      <EditText
+          android:id="@+id/edit_search"
+          android:background="@drawable/search_edit_bg"
+          android:paddingLeft="60dp"
+          android:layout_toRightOf="@id/sao"
+          android:text="ins超火的上衣"
+          android:layout_marginRight="50dp"
+          android:layout_width="match_parent"
+          android:layout_height="40dp" />
+
+        <ImageView
+            android:id="@+id/img_search"
+            android:layout_alignLeft="@id/edit_search"
+            android:background="@drawable/search_edit_bg"
+            android:src="@android:drawable/ic_search_category_default"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+        <ImageView
+            android:id="@+id/mai"
+            android:layout_alignRight="@id/edit_search"
+            android:src="@drawable/person_list_sound_up"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+        <ImageView
+            android:id="@+id/qiehuan"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/list2"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+    </RelativeLayout>
+
+    <com.youth.banner.Banner
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"></com.youth.banner.Banner>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/pull_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <com.jcodecraeer.xrecyclerview.XRecyclerView
+            android:id="@+id/xrecycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></com.jcodecraeer.xrecyclerview.XRecyclerView>
+
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+</LinearLayout>
